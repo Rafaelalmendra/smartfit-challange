@@ -1,6 +1,8 @@
 {
   "name": "smartfit-challange",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Page for searching and filtering open gym units developed during a video on the channel using Angular",
+  "author": "Rafael Almendra",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
