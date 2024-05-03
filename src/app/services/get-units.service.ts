@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { UnitsRespone } from '../types/units-response.interface';
+import type { Location, UnitsResponse } from '../types';
 
 @Injectable({
   providedIn: 'root',
@@ -12,9 +12,11 @@ export class GetUnitsService {
   readonly apiUrl =
     'https://test-frontend-developer.s3.amazonaws.com/data/locations.json';
 
+  private allUnits: Location[] = [];
+
   constructor(private httpClient: HttpClient) {}
 
-  getAllUnits(): Observable<UnitsRespone> {
-    return this.httpClient.get<UnitsRespone>(this.apiUrl);
+  getAllUnits(): Observable<UnitsResponse> {
+    return this.httpClient.get<UnitsResponse>(this.apiUrl);
   }
 }

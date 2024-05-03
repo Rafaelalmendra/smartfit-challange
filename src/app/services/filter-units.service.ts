@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Location } from '../types/location.interface';
+
+import type { Location } from '../types';
+
 import { HOUR_INDEXES, OPENING_HOURS } from '../utils/hours';
 
 @Injectable({
