@@ -13,6 +13,7 @@ import {
   FormsComponent,
   LegendComponent,
   HeaderComponent,
+  FooterComponent,
   CardsListComponent,
 } from './components';
 
@@ -29,6 +30,7 @@ import {
     FormsComponent,
     LegendComponent,
     HeaderComponent,
+    FooterComponent,
     CardsListComponent,
   ],
   templateUrl: './app.component.html',
