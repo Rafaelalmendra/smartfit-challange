@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { GetUnitsService, FilterUnitsService } from '../../services';
 
 import type { Location } from '../../types';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-forms',
@@ -23,7 +24,8 @@ export class FormsComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private unitService: GetUnitsService,
-    private filterUnitsService: FilterUnitsService
+    private filterUnitsService: FilterUnitsService,
+    private appComponent: AppComponent
   ) {}
 
   ngOnInit(): void {
@@ -53,5 +55,7 @@ export class FormsComponent implements OnInit {
 
   onClean(): void {
     this.formGroup.reset();
+    this.filteredResults = this.results;
+    this.appComponent.showList.next(false);
   }
 }
